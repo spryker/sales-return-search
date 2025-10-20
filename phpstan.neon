@@ -4,4 +4,4 @@ parameters:
             identifier: missingType.iterableValue
     level: 7
     excludePaths:
-        - '%rootDir%/../../../vendor/spryker/spryker/Bundles/SalesReturnSearch/src/Spryker/Client/SalesReturnSearch/Plugin/Elasticsearch/Query/ReturnReasonSearchQueryPlugin.php'
+        - '%rootDir%/../../../src/Spryker/SalesReturnSearch/src/Spryker/Client/SalesReturnSearch/Plugin/Elasticsearch/Query/ReturnReasonSearchQueryPlugin.php'
