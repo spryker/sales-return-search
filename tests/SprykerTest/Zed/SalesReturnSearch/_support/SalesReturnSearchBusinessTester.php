@@ -33,12 +33,14 @@ class SalesReturnSearchBusinessTester extends Actor
 {
     use _generated\SalesReturnSearchBusinessTesterActions;
 
-    /**
-     * @return void
-     */
     public function setDependencies(): void
     {
-        $this->setQueueAdaptersDependency();
+        $this->setDependency(QueueDependencyProvider::QUEUE_ADAPTERS, function (Container $container) {
+            return [
+                $container->getLocator()->rabbitMq()->client()->createQueueAdapter(),
+                $container->getLocator()->symfonyMessenger()->client()->createQueueAdapter(),
+            ];
+        });
     }
 
     /**
@@ -95,18 +97,6 @@ class SalesReturnSearchBusinessTester extends Actor
         }
 
         return $salesReturnReasonIds;
-    }
-
-    /**
-     * @return void
-     */
-    protected function setQueueAdaptersDependency(): void
-    {
-        $this->setDependency(QueueDependencyProvider::QUEUE_ADAPTERS, function (Container $container) {
-            return [
-                $container->getLocator()->rabbitMq()->client()->createQueueAdapter(),
-            ];
-        });
     }
 
     /**

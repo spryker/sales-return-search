@@ -43,7 +43,6 @@ class WriteCollectionByReturnReasonEventsTest extends Unit
     {
         parent::setUp();
 
-        $this->tester->setDependencies();
         $this->tester->cleanUpDatabase();
     }
 
