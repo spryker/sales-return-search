@@ -20,9 +20,6 @@ use Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface;
  */
 class SalesReturnSearchFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Client\SalesReturnSearch\Reader\ReturnReasonSearchReaderInterface
-     */
     public function createReturnReasonSearchReader(): ReturnReasonSearchReaderInterface
     {
         return new ReturnReasonSearchReader(
@@ -33,9 +30,6 @@ class SalesReturnSearchFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Client\SalesReturnSearch\PaginationConfigBuilder\PaginationConfigBuilderInterface
-     */
     public function createReturnReasonSearchPaginationConfigBuilder(): PaginationConfigBuilderInterface
     {
         $returnReasonSearchPaginationConfigBuilder = new ReturnReasonSearchPaginationConfigBuilder();
@@ -46,17 +40,11 @@ class SalesReturnSearchFactory extends AbstractFactory
         return $returnReasonSearchPaginationConfigBuilder;
     }
 
-    /**
-     * @return \Spryker\Client\SalesReturnSearch\Dependency\Client\SalesReturnSearchToSearchClientInterface
-     */
     public function getSearchClient(): SalesReturnSearchToSearchClientInterface
     {
         return $this->getProvidedDependency(SalesReturnSearchDependencyProvider::CLIENT_SEARCH);
     }
 
-    /**
-     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface
-     */
     public function getReturnReasonSearchQueryPlugin(): QueryInterface
     {
         return $this->getProvidedDependency(SalesReturnSearchDependencyProvider::PLUGIN_RETURN_REASON_SEARCH_QUERY);

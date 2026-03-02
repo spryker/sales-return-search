@@ -51,11 +51,6 @@ class ReturnReasonSearchReader implements ReturnReasonSearchReaderInterface
         $this->returnReasonSearchResultFormatterPlugins = $returnReasonSearchResultFormatterPlugins;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ReturnReasonSearchRequestTransfer $returnReasonSearchRequestTransfer
-     *
-     * @return array
-     */
     public function searchReturnReasons(ReturnReasonSearchRequestTransfer $returnReasonSearchRequestTransfer): array
     {
         $requestParameters = $returnReasonSearchRequestTransfer->getRequestParameters();

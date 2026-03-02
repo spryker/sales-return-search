@@ -87,9 +87,6 @@ class ReturnReasonSearchQueryPlugin extends AbstractPlugin implements QueryInter
         $this->searchContextTransfer = $searchContextTransfer;
     }
 
-    /**
-     * @return \Elastica\Query
-     */
     protected function createSearchQuery(): Query
     {
         $query = new Query();
@@ -100,11 +97,6 @@ class ReturnReasonSearchQueryPlugin extends AbstractPlugin implements QueryInter
         return $query;
     }
 
-    /**
-     * @param \Elastica\Query $baseQuery
-     *
-     * @return \Elastica\Query
-     */
     protected function setQuery(Query $baseQuery): Query
     {
         $boolQuery = new BoolQuery();
@@ -113,11 +105,6 @@ class ReturnReasonSearchQueryPlugin extends AbstractPlugin implements QueryInter
         return $baseQuery->setQuery($boolQuery);
     }
 
-    /**
-     * @param \Elastica\Query\BoolQuery $boolQuery
-     *
-     * @return \Elastica\Query\BoolQuery
-     */
     protected function setTypeFilter(BoolQuery $boolQuery): BoolQuery
     {
         $typeFilter = $this->getMatchQuery()->setField(ReturnReasonIndexMap::TYPE, SalesReturnSearchConfig::RETURN_REASON_RESOURCE_NAME);
@@ -125,9 +112,6 @@ class ReturnReasonSearchQueryPlugin extends AbstractPlugin implements QueryInter
         return $boolQuery->addMust($typeFilter);
     }
 
-    /**
-     * @return void
-     */
     protected function setupDefaultSearchContext(): void
     {
         $searchContextTransfer = new SearchContextTransfer();
@@ -136,9 +120,6 @@ class ReturnReasonSearchQueryPlugin extends AbstractPlugin implements QueryInter
         $this->searchContextTransfer = $searchContextTransfer;
     }
 
-    /**
-     * @return bool
-     */
     protected function hasSearchContext(): bool
     {
         return (bool)$this->searchContextTransfer;

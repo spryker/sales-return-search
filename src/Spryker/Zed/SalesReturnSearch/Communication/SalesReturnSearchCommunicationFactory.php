@@ -19,9 +19,6 @@ use Spryker\Zed\SalesReturnSearch\SalesReturnSearchDependencyProvider;
  */
 class SalesReturnSearchCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Spryker\Zed\SalesReturnSearch\Dependency\Facade\SalesReturnSearchToSalesReturnFacadeInterface
-     */
     public function getSalesReturnFacade(): SalesReturnSearchToSalesReturnFacadeInterface
     {
         return $this->getProvidedDependency(SalesReturnSearchDependencyProvider::FACADE_SALES_RETURN);

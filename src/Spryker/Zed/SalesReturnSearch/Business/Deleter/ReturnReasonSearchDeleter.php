@@ -22,10 +22,6 @@ class ReturnReasonSearchDeleter implements ReturnReasonSearchDeleterInterface
      */
     protected $eventBehaviorFacade;
 
-    /**
-     * @param \Spryker\Zed\SalesReturnSearch\Dependency\Facade\SalesReturnSearchToEventBehaviorFacadeInterface $eventBehaviorFacade
-     * @param \Spryker\Zed\SalesReturnSearch\Persistence\SalesReturnSearchEntityManagerInterface $entityManager
-     */
     public function __construct(
         SalesReturnSearchToEventBehaviorFacadeInterface $eventBehaviorFacade,
         SalesReturnSearchEntityManagerInterface $entityManager

@@ -38,11 +38,6 @@ class SalesReturnSearchDependencyProvider extends AbstractDependencyProvider
      */
     public const PLUGINS_RETURN_REASON_SEARCH_QUERY_EXPANDER = 'PLUGINS_RETURN_REASON_SEARCH_QUERY_EXPANDER';
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     public function provideServiceLayerDependencies(Container $container): Container
     {
         $container = parent::provideServiceLayerDependencies($container);
@@ -54,11 +49,6 @@ class SalesReturnSearchDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addSearchClient(Container $container): Container
     {
         $container->set(static::CLIENT_SEARCH, function (Container $container) {
@@ -70,11 +60,6 @@ class SalesReturnSearchDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addReturnReasonSearchQueryPlugin(Container $container): Container
     {
         $container->set(static::PLUGIN_RETURN_REASON_SEARCH_QUERY, function () {
@@ -84,11 +69,6 @@ class SalesReturnSearchDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addReturnReasonSearchResultFormatterPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_RETURN_REASON_SEARCH_RESULT_FORMATTER, function () {
@@ -98,11 +78,6 @@ class SalesReturnSearchDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addReturnReasonSearchQueryExpanderPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_RETURN_REASON_SEARCH_QUERY_EXPANDER, function () {
@@ -112,9 +87,6 @@ class SalesReturnSearchDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface
-     */
     protected function createReturnReasonSearchQueryPlugin(): QueryInterface
     {
         return new ReturnReasonSearchQueryPlugin();

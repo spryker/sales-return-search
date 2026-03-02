@@ -25,10 +25,6 @@ class ReturnReasonSearchMapper implements ReturnReasonSearchMapperInterface
      */
     protected $returnReasonSearchDataMapper;
 
-    /**
-     * @param \Spryker\Zed\SalesReturnSearch\Dependency\Service\SalesReturnSearchToUtilEncodingServiceInterface $utilEncodingService
-     * @param \Spryker\Zed\SalesReturnSearch\Business\DataMapper\ReturnReasonSearchDataMapperInterface $returnReasonSearchDataMapper
-     */
     public function __construct(
         SalesReturnSearchToUtilEncodingServiceInterface $utilEncodingService,
         ReturnReasonSearchDataMapperInterface $returnReasonSearchDataMapper

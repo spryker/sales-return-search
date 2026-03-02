@@ -25,11 +25,6 @@ class SalesReturnSearchToSalesReturnFacadeBridge implements SalesReturnSearchToS
         $this->salesReturnFacade = $salesReturnFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ReturnReasonFilterTransfer $returnReasonFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ReturnReasonCollectionTransfer
-     */
     public function getReturnReasons(ReturnReasonFilterTransfer $returnReasonFilterTransfer): ReturnReasonCollectionTransfer
     {
         return $this->salesReturnFacade->getReturnReasons($returnReasonFilterTransfer);

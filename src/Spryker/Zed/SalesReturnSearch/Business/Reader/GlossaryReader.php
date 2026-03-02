@@ -22,10 +22,6 @@ class GlossaryReader implements GlossaryReaderInterface
      */
     protected $localeFacade;
 
-    /**
-     * @param \Spryker\Zed\SalesReturnSearch\Dependency\Facade\SalesReturnSearchToGlossaryFacadeInterface $glossaryFacade
-     * @param \Spryker\Zed\SalesReturnSearch\Dependency\Facade\SalesReturnSearchToLocaleFacadeInterface $localeFacade
-     */
     public function __construct(
         SalesReturnSearchToGlossaryFacadeInterface $glossaryFacade,
         SalesReturnSearchToLocaleFacadeInterface $localeFacade

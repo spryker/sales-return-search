@@ -36,9 +36,6 @@ class DeleteCollectionByReturnReasonEventsTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -47,9 +44,6 @@ class DeleteCollectionByReturnReasonEventsTest extends Unit
         $this->tester->cleanUpDatabase();
     }
 
-    /**
-     * @return void
-     */
     public function testDeleteCollectionByReturnReasonEventsDeletesRecords(): void
     {
         // Arrange
@@ -67,9 +61,6 @@ class DeleteCollectionByReturnReasonEventsTest extends Unit
         $this->assertCount(0, $postUnpublishSalesReturnSearchEntities);
     }
 
-    /**
-     * @return void
-     */
     public function testDeleteCollectionByReturnReasonEventsDoesNothingForEmptyEventTransfers(): void
     {
         // Arrange

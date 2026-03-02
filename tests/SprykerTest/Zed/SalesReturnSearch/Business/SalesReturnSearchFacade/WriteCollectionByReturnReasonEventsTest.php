@@ -36,9 +36,6 @@ class WriteCollectionByReturnReasonEventsTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -46,9 +43,6 @@ class WriteCollectionByReturnReasonEventsTest extends Unit
         $this->tester->cleanUpDatabase();
     }
 
-    /**
-     * @return void
-     */
     public function testWriteCollectionByReturnReasonEventsWritesRecords(): void
     {
         // Arrange
@@ -68,9 +62,6 @@ class WriteCollectionByReturnReasonEventsTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testWriteCollectionByReturnReasonEventsDoesNothingForEmptyEventTransfers(): void
     {
         // Act

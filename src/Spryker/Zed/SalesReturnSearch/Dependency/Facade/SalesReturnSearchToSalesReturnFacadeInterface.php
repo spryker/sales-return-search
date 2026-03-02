@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\ReturnReasonFilterTransfer;
 
 interface SalesReturnSearchToSalesReturnFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ReturnReasonFilterTransfer $returnReasonFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ReturnReasonCollectionTransfer
-     */
     public function getReturnReasons(ReturnReasonFilterTransfer $returnReasonFilterTransfer): ReturnReasonCollectionTransfer;
 }

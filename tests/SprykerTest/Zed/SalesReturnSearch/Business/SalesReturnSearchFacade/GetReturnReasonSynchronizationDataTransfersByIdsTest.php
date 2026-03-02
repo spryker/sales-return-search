@@ -37,9 +37,6 @@ class GetReturnReasonSynchronizationDataTransfersByIdsTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -48,9 +45,6 @@ class GetReturnReasonSynchronizationDataTransfersByIdsTest extends Unit
         $this->tester->cleanUpDatabase();
     }
 
-    /**
-     * @return void
-     */
     public function testGetReturnReasonSynchronizationDataTransfersByIdsWorksWithIds(): void
     {
         // Arrange
@@ -74,9 +68,6 @@ class GetReturnReasonSynchronizationDataTransfersByIdsTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testGetReturnReasonSynchronizationDataTransfersByIdsWorksWithFilter(): void
     {
         // Arrange
@@ -94,9 +85,6 @@ class GetReturnReasonSynchronizationDataTransfersByIdsTest extends Unit
         $this->assertCount(1, $synchronizationDataTransfers);
     }
 
-    /**
-     * @return void
-     */
     public function testGetReturnReasonSynchronizationDataTransfersByIdsWorksWithFilterAndIds(): void
     {
         // Arrange

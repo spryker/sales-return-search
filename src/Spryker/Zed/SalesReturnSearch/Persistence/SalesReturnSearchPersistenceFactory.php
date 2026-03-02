@@ -17,9 +17,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractPersistenceFactory;
  */
 class SalesReturnSearchPersistenceFactory extends AbstractPersistenceFactory
 {
-    /**
-     * @return \Orm\Zed\SalesReturnSearch\Persistence\SpySalesReturnReasonSearchQuery
-     */
     public function getSalesReturnReasonSearchPropelQuery(): SpySalesReturnReasonSearchQuery
     {
         return SpySalesReturnReasonSearchQuery::create();

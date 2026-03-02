@@ -16,19 +16,11 @@ class ReturnReasonSearchPaginationConfigBuilder implements PaginationConfigBuild
      */
     protected $paginationConfigTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\PaginationConfigTransfer $paginationConfigTransfer
-     *
-     * @return void
-     */
     public function setPaginationConfigTransfer(PaginationConfigTransfer $paginationConfigTransfer): void
     {
         $this->paginationConfigTransfer = $paginationConfigTransfer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\PaginationConfigTransfer
-     */
     public function getPaginationConfigTransfer(): PaginationConfigTransfer
     {
         return $this->paginationConfigTransfer;

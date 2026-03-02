@@ -43,9 +43,6 @@ class SalesReturnSearchBusinessTester extends Actor
         });
     }
 
-    /**
-     * @return void
-     */
     public function cleanUpDatabase(): void
     {
         $this->cleanUpReturnReasonSearchTable();
@@ -99,9 +96,6 @@ class SalesReturnSearchBusinessTester extends Actor
         return $salesReturnReasonIds;
     }
 
-    /**
-     * @return void
-     */
     protected function cleanUpReturnReasonSearchTable(): void
     {
         SpySalesReturnReasonSearchQuery::create()->deleteAll();

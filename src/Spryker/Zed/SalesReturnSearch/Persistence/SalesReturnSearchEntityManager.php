@@ -35,11 +35,6 @@ class SalesReturnSearchEntityManager extends AbstractEntityManager implements Sa
         $salesReturnReasonSearchCollection->delete();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ReturnReasonSearchTransfer $returnReasonSearchTransfer
-     *
-     * @return void
-     */
     public function saveReturnReasonSearch(ReturnReasonSearchTransfer $returnReasonSearchTransfer): void
     {
         $returnReasonSearchEntity = $this->getFactory()

@@ -18,10 +18,5 @@ interface SalesReturnSearchEntityManagerInterface
      */
     public function deleteReturnReasonSearchByReturnReasonIds(array $returnReasonIds): void;
 
-    /**
-     * @param \Generated\Shared\Transfer\ReturnReasonSearchTransfer $returnReasonSearchTransfer
-     *
-     * @return void
-     */
     public function saveReturnReasonSearch(ReturnReasonSearchTransfer $returnReasonSearchTransfer): void;
 }

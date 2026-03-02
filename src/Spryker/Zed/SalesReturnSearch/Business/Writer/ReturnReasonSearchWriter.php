@@ -49,14 +49,6 @@ class ReturnReasonSearchWriter implements ReturnReasonSearchWriterInterface
      */
     protected $repository;
 
-    /**
-     * @param \Spryker\Zed\SalesReturnSearch\Dependency\Facade\SalesReturnSearchToSalesReturnFacadeInterface $salesReturnFacade
-     * @param \Spryker\Zed\SalesReturnSearch\Dependency\Facade\SalesReturnSearchToEventBehaviorFacadeInterface $eventBehaviorFacade
-     * @param \Spryker\Zed\SalesReturnSearch\Business\Reader\GlossaryReaderInterface $glossaryReader
-     * @param \Spryker\Zed\SalesReturnSearch\Business\Mapper\ReturnReasonSearchMapperInterface $returnReasonSearchMapper
-     * @param \Spryker\Zed\SalesReturnSearch\Persistence\SalesReturnSearchRepositoryInterface $repository
-     * @param \Spryker\Zed\SalesReturnSearch\Persistence\SalesReturnSearchEntityManagerInterface $entityManager
-     */
     public function __construct(
         SalesReturnSearchToSalesReturnFacadeInterface $salesReturnFacade,
         SalesReturnSearchToEventBehaviorFacadeInterface $eventBehaviorFacade,

@@ -32,9 +32,6 @@ use Spryker\Zed\SalesReturnSearch\SalesReturnSearchDependencyProvider;
  */
 class SalesReturnSearchBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\SalesReturnSearch\Business\Writer\ReturnReasonSearchWriterInterface
-     */
     public function createReturnReasonSearchWriter(): ReturnReasonSearchWriterInterface
     {
         return new ReturnReasonSearchWriter(
@@ -47,9 +44,6 @@ class SalesReturnSearchBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\SalesReturnSearch\Business\Deleter\ReturnReasonSearchDeleterInterface
-     */
     public function createReturnReasonSearchDeleter(): ReturnReasonSearchDeleterInterface
     {
         return new ReturnReasonSearchDeleter(
@@ -58,9 +52,6 @@ class SalesReturnSearchBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\SalesReturnSearch\Business\Reader\GlossaryReaderInterface
-     */
     public function createGlossaryReader(): GlossaryReaderInterface
     {
         return new GlossaryReader(
@@ -69,17 +60,11 @@ class SalesReturnSearchBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\SalesReturnSearch\Business\DataMapper\ReturnReasonSearchDataMapperInterface
-     */
     public function createReturnReasonSearchDataMapper(): ReturnReasonSearchDataMapperInterface
     {
         return new ReturnReasonSearchDataMapper();
     }
 
-    /**
-     * @return \Spryker\Zed\SalesReturnSearch\Business\Mapper\ReturnReasonSearchMapperInterface
-     */
     public function createReturnReasonSearchMapper(): ReturnReasonSearchMapperInterface
     {
         return new ReturnReasonSearchMapper(
@@ -88,41 +73,26 @@ class SalesReturnSearchBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\SalesReturnSearch\Dependency\Facade\SalesReturnSearchToEventBehaviorFacadeInterface
-     */
     public function getEventBehaviorFacade(): SalesReturnSearchToEventBehaviorFacadeInterface
     {
         return $this->getProvidedDependency(SalesReturnSearchDependencyProvider::FACADE_EVENT_BEHAVIOR);
     }
 
-    /**
-     * @return \Spryker\Zed\SalesReturnSearch\Dependency\Facade\SalesReturnSearchToSalesReturnFacadeInterface
-     */
     public function getSalesReturnFacade(): SalesReturnSearchToSalesReturnFacadeInterface
     {
         return $this->getProvidedDependency(SalesReturnSearchDependencyProvider::FACADE_SALES_RETURN);
     }
 
-    /**
-     * @return \Spryker\Zed\SalesReturnSearch\Dependency\Facade\SalesReturnSearchToGlossaryFacadeInterface
-     */
     public function getGlossaryFacade(): SalesReturnSearchToGlossaryFacadeInterface
     {
         return $this->getProvidedDependency(SalesReturnSearchDependencyProvider::FACADE_GLOSSARY);
     }
 
-    /**
-     * @return \Spryker\Zed\SalesReturnSearch\Dependency\Facade\SalesReturnSearchToLocaleFacadeInterface
-     */
     public function getLocaleFacade(): SalesReturnSearchToLocaleFacadeInterface
     {
         return $this->getProvidedDependency(SalesReturnSearchDependencyProvider::FACADE_LOCALE);
     }
 
-    /**
-     * @return \Spryker\Zed\SalesReturnSearch\Dependency\Service\SalesReturnSearchToUtilEncodingServiceInterface
-     */
     public function getUtilEncodingService(): SalesReturnSearchToUtilEncodingServiceInterface
     {
         return $this->getProvidedDependency(SalesReturnSearchDependencyProvider::SERVICE_UTIL_ENCODING);
